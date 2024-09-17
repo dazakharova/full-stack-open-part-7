@@ -1,0 +1,15 @@
+node_modules/
+public/
+playwright-report/
+
+*.html
+
+package.json
+package-lock.json
+
+.DS_Store
+.git/
+
+vite.config.js
+
+README.md
