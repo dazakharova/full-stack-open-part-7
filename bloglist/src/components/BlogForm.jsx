@@ -28,9 +28,9 @@ const BlogForm = () => {
     dispatch(createBlog({
       title: title,
       author: author,
-      url: url,
+      url: url
     }))
-    dispatch(setNotification({message: `a new blog ${blogObject.title} by ${blogObject.author} added`, type: 'success'}, 5000))
+    dispatch(setNotification({message: `a new blog ${title} by ${author} added`, type: 'success'}, 5000))
 
     setTitle('');
     setAuthor('');
