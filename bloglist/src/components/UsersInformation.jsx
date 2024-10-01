@@ -7,11 +7,11 @@ const UsersInformation = () => {
   return (
       <>
         <h1>Users</h1>
-        <table>
+        <table className="table table-hover">
           <thead>
             <tr>
-              <th></th>
-              <th>blogs created</th>
+              <th scope="col"></th>
+              <th scope="col">blogs created</th>
             </tr>
           </thead>
           <tbody>

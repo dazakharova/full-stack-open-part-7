@@ -41,10 +41,11 @@ const BlogForm = () => {
     <div>
       <h2>create new</h2>
       <form onSubmit={addBlog}>
-        <div>
+        <div className="form-group">
           <label>
             title:
             <input
+              className="form-control"
               type="text"
               value={title}
               name="title"
@@ -54,10 +55,11 @@ const BlogForm = () => {
             />
           </label>
         </div>
-        <div>
+        <div className="form-group">
           <label>
             author:
             <input
+              className="form-control"
               type="text"
               value={author}
               name="author"
@@ -67,10 +69,11 @@ const BlogForm = () => {
             />
           </label>
         </div>
-        <div>
+        <div className="form-group">
           <label>
             url:
             <input
+              className="form-control"
               type="text"
               value={url}
               name="url"
@@ -80,7 +83,7 @@ const BlogForm = () => {
             />
           </label>
         </div>
-        <button type="submit">create</button>
+        <button className="btn btn-primary" type="submit">create</button>
       </form>
     </div>
   );

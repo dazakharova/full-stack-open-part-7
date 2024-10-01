@@ -54,7 +54,7 @@ const App = () => {
   }, []);
 
   const blogForm = () => (
-    <Togglable buttonLabel="create new blog" ref={blogFormRef}>
+    <Togglable buttonStyle="btn btn-primary" buttonLabel="create new blog" ref={blogFormRef}>
       <BlogForm />
     </Togglable>
   );
@@ -69,10 +69,10 @@ const App = () => {
                 <h1>blog app</h1>
 
                 {blogForm()}
-                <ul>
+                <ul className="list-group">
                   {blogs ? (blogs.map((blog, index) => {
                     return (
-                        <li key={index}><Link to={`/blogs/${blog.id}`}>{blog.title}</Link></li>
+                        <li className="list-group-item list-group-item-action" key={index}><Link to={`/blogs/${blog.id}`}>{blog.title}</Link></li>
                     )
                   })) : <></>}
                 </ul>
@@ -84,7 +84,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       <Menu />
       <Notification />
       <Routes>

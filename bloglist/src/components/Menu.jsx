@@ -17,19 +17,28 @@ const Menu = () => {
   };
 
   return (
-      <>
-        <Link style={padding} to="/" >blogs</Link>
-        <Link style={padding} to="/users" >users</Link>
-        {loggedUser !== null ? (
-            <div>
-              <span style={padding}>{loggedUser.name} logged in</span>
-              <button onClick={handleLogout} type="submit">
-                logout
-              </button>
-            </div>
-          ) : (<></>)}
-
-      </>
+      <div className="navbar navbar-expand-lg navbar-light bg-light">
+        <ul className="navbar-nav w-100 d-flex justify-content-between">
+          <div className="d-flex">
+            <li className="nav-item">
+              <Link className="nav-link" style={padding} to="/" >blogs</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" style={padding} to="/users" >users</Link>
+            </li>
+          </div>
+          <li className="nav-item d-flex align-items-center">
+            {loggedUser !== null ? (
+                <>
+                  <span style={padding}>{loggedUser.name} logged in</span>
+                  <button className="btn btn-outline-danger ml-2" onClick={handleLogout} type="submit">
+                    logout
+                  </button>
+                </>
+            ) : null}
+          </li>
+        </ul>
+      </div>
   )
 }
 
